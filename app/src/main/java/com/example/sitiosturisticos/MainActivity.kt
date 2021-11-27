@@ -3,47 +3,76 @@ package com.example.sitiosturisticos
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.ImageButton
-import com.example.sitiosturisticos.R
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.sitiosturisticos.model.Poi
+import com.example.sitiosturisticos.model.PoiItem
+import com.google.gson.Gson
+
+private lateinit var  lugares : ArrayList<PoiItem>
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val buttonC = findViewById<ImageButton>(R.id.btnCastillo)
-        buttonC.setOnClickListener{
-            intent = Intent(this, castillo::class.java)
-            startActivity(intent)
-        }
 
-        val buttonI = findViewById<ImageButton>(R.id.btnIsla)
-        buttonI.setOnClickListener{
-            intent = Intent(this, IslasRosario::class.java)
-            startActivity(intent)
-        }
 
-        val buttonM = findViewById<ImageButton>(R.id.btnMuseo)
-        buttonM.setOnClickListener{
-            intent = Intent(this, MuseoInquisicion::class.java)
+        val buttonConfig = findViewById<ImageButton>(R.id.imageButtonConfig)
+        buttonConfig.setOnClickListener{
+            intent = Intent(this, Notificaciones::class.java)
             startActivity(intent)
         }
+        val recyclerView = findViewById<RecyclerView>(R.id.lugares_recycle_view)
 
-        val buttonP = findViewById<ImageButton>(R.id.btnPlaza)
-        buttonP.setOnClickListener{
-            intent = Intent(this, PlazaSantoDomingo::class.java)
-            startActivity(intent)
-        }
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val buttonT = findViewById<ImageButton>(R.id.btnTorre)
-        buttonT.setOnClickListener{
-            intent = Intent(this, TorreReloj::class.java)
-            startActivity(intent)
-        }
+        
+        
+        lugares = loadMockLugaresFromJson()
+
+        val adapter = Lista_poi(lugares)
+        recyclerView.adapter = adapter
+
+
 
     }
+
+    private fun loadMockLugaresFromJson(): ArrayList<PoiItem> {
+        var lugaresString: String = applicationContext.assets.open("sitiosTuristicos.json").bufferedReader().use{it.readText()}
+        val gson = Gson()
+        val lugar= gson.fromJson(lugaresString, Poi::class.java)
+
+        return lugar
+
+
+
+    }
+/*
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater= menuInflater
+        inflater.inflate(R.menu.menu_overflow,menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        val fm : FragmentManager = supportFragmentManager
+        val ft : FragmentTransaction=fm.beginTransaction()
+
+        return when (item.itemId){
+            R.id.menu_preferencias -> {
+                val fragmentSettings = SettingsFragment()
+                ft.replace(R.id.fragmentContainerView,fragmentSettings).commit()
+                true
+            }else -> return true
+        }
+    }*/
 
 
 }
