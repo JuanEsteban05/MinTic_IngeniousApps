@@ -31,13 +31,13 @@ class Lista_poi (private  val poiList :ArrayList<PoiItem>,
     }
     class ViewHolder(itemview: View):RecyclerView.ViewHolder(itemview){
         private var nameTextView: TextView = itemview.findViewById(R.id.textView_titulo)
-        private var descripcionTextView: TextView = itemview.findViewById(R.id.textView_descripcion)
+        /*private var descripcionTextView: TextView = itemview.findViewById(R.id.textView_descripcion)*/
         private var puntajeTextView: RatingBar = itemview.findViewById(R.id.ratingBar2)
         private var pictureView: ImageView = itemview.findViewById(R.id.pictureImageView)
         fun bind(lugar: PoiItem){
 
             nameTextView.text=lugar.titulo
-            descripcionTextView.text=lugar.pDescripcion
+            /*descripcionTextView.text=lugar.pDescripcion*/
             puntajeTextView.rating= lugar.puntuacion.toFloat()
             Picasso.get().load(lugar.imagen).into(pictureView)
 
