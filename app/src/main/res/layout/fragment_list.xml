@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".ListFragment">
+    tools:context=".lista.ListFragment">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/gilroy_bold"
-            android:text="Cartagena"
+            android:text="@string/cartagena"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -33,7 +34,7 @@
             android:gravity="center"
             android:paddingStart="20dp"
             android:paddingTop="20dp"
-            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
             android:paddingBottom="20dp"
             android:text="@string/descripcion_ciudad"
             android:textStyle="bold" />
@@ -42,9 +43,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/gilroy_bold"
             android:padding="10dp"
-            android:text="Lugares de interes"
+            android:text="@string/lugares_de_interes"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <ScrollView
             android:layout_width="match_parent"

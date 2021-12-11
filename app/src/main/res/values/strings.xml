@@ -31,5 +31,7 @@
     <string name="attachment_title">Sonido de Notificaciones</string>
     <string name="attachment_summary_on">Desactivar sonido de notificaciones</string>
     <string name="attachment_summary_off">Activar sonido de notificaciones</string>
+    <string name="cartagena">Cartagena</string>
+    <string name="lugares_de_interes">Lugares de interes</string>
 
 </resources>
