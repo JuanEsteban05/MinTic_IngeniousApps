@@ -52,6 +52,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/gilroy_bold"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:text="Calificacion" />
 
