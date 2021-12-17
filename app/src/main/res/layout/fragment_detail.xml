@@ -1,42 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="5dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginRight="5dp"
-    android:layout_marginBottom="5dp"
+
     android:orientation="vertical"
     tools:context=".detalle.DetailFragment">
 
-    <ScrollView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:alpha="0.2"
+        android:background="@drawable/fondoasdfghj"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textViewTituloP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/gilroy_bold"
                 android:gravity="center"
                 android:text="@string/castillo"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"/>
 
             <ImageView
                 android:id="@+id/imageViewP"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                app:srcCompat="@drawable/imagen1" />
+                app:srcCompat="@drawable/imagen1"
+                />
 
             <TextView
                 android:id="@+id/textView"
@@ -45,9 +51,9 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/gilroy_bold"
                 android:gravity="center"
-                android:text="Calificacion"
-                android:textStyle="bold" />
+                android:text="Calificacion" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -70,6 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_bold"
                     android:text="4.0" />
             </LinearLayout>
 
@@ -77,8 +84,13 @@
                 android:id="@+id/textViewDescripcionP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_light"
+                android:text="@string/castillo_descripcion"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/castillo_descripcion" />
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"/>
 
             <TextView
                 android:id="@+id/textView3"
@@ -87,6 +99,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/gilroy_bold"
                 android:gravity="center"
                 android:text="Horario"
                 android:textStyle="bold" />
@@ -95,9 +108,15 @@
                 android:id="@+id/textViewHorario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+
                 android:layout_weight="1"
-                android:text="Lunes a domingo de 8 a.m. a 6 p.m. " />
+                android:fontFamily="@font/gilroy_light"
+                android:text="Lunes a domingo de 8 a.m. a 6 p.m. "
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"/>
 
             <TextView
                 android:id="@+id/textView10"
@@ -106,6 +125,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/gilroy_bold"
                 android:gravity="center"
                 android:text="Ubicacion"
                 android:textStyle="bold" />
@@ -114,9 +134,14 @@
                 android:id="@+id/textViewUbicacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/gilroy_light"
                 android:text="El Castillo San Felipe de Barajas se encuentra en la Avenida Antonio Arévalo, en el sector Pie del Cerro."
-                android:layout_marginTop="10dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -125,6 +150,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/gilroy_bold"
                 android:gravity="center"
                 android:text="Mapa"
                 android:textStyle="bold" />
@@ -133,23 +159,30 @@
                 android:id="@+id/mapButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:minHeight="48dp"
-                android:layout_marginTop="10dp"
                 android:src="@drawable/ic_map"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <fragment
                 android:id="@+id/map"
                 android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_height="300dp"
                 android:layout_weight="1"
                 tools:ignore="SpeakableTextPresentCheck" />
 
+
+
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>

@@ -5,47 +5,72 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".lista.ListFragment">
+    tools:context=".lista.ListFragment"
 
+
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:background="@drawable/fondod" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/idTitulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="28dp"
-            android:fontFamily="@font/gilroy_bold"
-            android:text="@string/cartagena"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView37"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/gilroy_light"
-            android:gravity="center"
-            android:paddingStart="20dp"
-            android:paddingTop="20dp"
-            android:paddingEnd="20dp"
-            android:paddingBottom="20dp"
-            android:text="@string/descripcion_ciudad"
-            android:textStyle="bold" />
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/gilroy_bold"
-            android:padding="10dp"
-            android:text="@string/lugares_de_interes"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            android:alpha="0.6">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="ExtraText"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="15dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/idTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="@string/cartagena"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_light"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/descripcion_ciudad"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
 
         <ScrollView
             android:layout_width="match_parent"
