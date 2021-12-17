@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "229372827928",
+    "project_id": "ingenious-apps-cc4ab",
+    "storage_bucket": "ingenious-apps-cc4ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229372827928:android:e69b2033feb8db0f27266d",
+        "android_client_info": {
+          "package_name": "com.example.sitiosturisticos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229372827928-ie1iuq63df2c0s51kbj5tgss355vfm83.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sitiosturisticos",
+            "certificate_hash": "410d40901f3788680314c56f72b9c1c53ee2f012"
+          }
+        },
+        {
+          "client_id": "229372827928-1lahe4vieetfp1d618ta34u2t1rqmdgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHt_XYvxZ3c0GJim2KAWJcYpQiGJCc_Pw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229372827928-1lahe4vieetfp1d618ta34u2t1rqmdgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

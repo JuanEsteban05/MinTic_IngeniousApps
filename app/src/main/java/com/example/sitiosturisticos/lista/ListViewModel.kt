@@ -24,12 +24,12 @@ class ListViewModel : ViewModel() {
             sitiosLoad.postValue(repository.getPoi())
         }
     }
-
+/*
     fun loadMockLugaresFromJson(lugaresString: InputStream?) {
 
         val lugaresString = lugaresString?.bufferedReader().use{it!!.readText()}
         val gson = Gson()
         sitiosLoad.value= gson.fromJson(lugaresString, Poi::class.java)
 
-    }
+    }*/
 }
